@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ChevronDown, ChevronUp, Coins, Home, Inbox, Plus, Projector, Settings, User, User2, Wallet } from "lucide-react";
+import { ChevronDown, ChevronUp, Coins, Inbox, Plus, Projector, Settings, User2 } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 import {
@@ -22,13 +22,8 @@ import {
 
 const items = [
     {
-        title: "Home",
-        url: "/",
-        icon: Home,
-    },
-    {
         title: "Marketcap",
-        url: "/marketcap",
+        url: "/",
         icon: Coins,
     },
     {

@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "./components/providers/theme-provider";
-import { SidebarProvider } from "./components/ui/sidebar";
-import { AppSidebar } from "./components/AppSidebar";
-import { AppNavbar } from "./components/AppNavbar";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/AppSidebar";
+import { AppNavbar } from "@/components/AppNavbar";
 
-import Home from "./pages/Home";
-import Marketcap from "./pages/Marketcap";
+import { Marketcap } from "@/pages/Marketcap";
+import { AssetDetail } from "@/pages/AssetDetail";
 
 function App() {
   const defaultOpen = true;
@@ -22,8 +22,8 @@ function App() {
 
               <div className="px-4 flex-1">
                 <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/marketcap" element={<Marketcap />} />
+                  <Route path="/" element={<Marketcap />} />
+                  <Route path="/:assetId" element={<AssetDetail />} />
                 </Routes>
               </div>
             </main>
