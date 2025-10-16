@@ -55,7 +55,6 @@ export const AssetsProvider: React.FC<{ children: React.ReactNode }> = ({ childr
                             timestamp: Date.now(),
                             price: newPrice,
                             change,
-                            volume: Math.floor(Math.random() * 1000) + 100, // mock de volume
                         };
 
                         return {

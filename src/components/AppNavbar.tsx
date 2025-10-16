@@ -19,9 +19,9 @@ const AppNavbar = () => {
     return (
         <nav className="flex p-3 items-center justify-between sticky top-0 bg-background z-10">
 
-            <SidebarTrigger className="text-white" />
+            <SidebarTrigger className="color-primary-foreground" />
 
-            <div className="flex items-center gap-4 text-white">
+            <div className="flex items-center gap-4 color-primary-foreground">
                 <Link to="/">Marketcap</Link>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>

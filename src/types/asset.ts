@@ -2,7 +2,6 @@ export interface AssetHistory {
     timestamp: number;
     price: number;
     change: number;
-    volume: number;
 }
 
 export interface Asset {

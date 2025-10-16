@@ -9,6 +9,7 @@ import {
     ResponsiveContainer,
     BarChart,
     Bar,
+    Cell,
 } from "recharts";
 
 import { useAssets } from "@/context/assets.context";
@@ -50,7 +51,7 @@ export const AssetDetail: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="border border-neutral-700 dark:border-neutral-600 p-4 rounded bg-neutral-50 dark:bg-neutral-900">
                     <h2 className="font-semibold mb-2">Preço recente</h2>
-                    <ResponsiveContainer width="100%" height={200}>
+                    <ResponsiveContainer width="100%" height={250}>
                         <LineChart data={asset.history}>
                             <XAxis
                                 dataKey="timestamp"
@@ -100,8 +101,8 @@ export const AssetDetail: React.FC = () => {
                 </div>
 
                 <div className="border border-neutral-700 dark:border-neutral-600 p-4 rounded bg-neutral-50 dark:bg-neutral-900">
-                    <h2 className="font-semibold mb-2">Volume</h2>
-                    <ResponsiveContainer width="100%" height={150}>
+                    <h2 className="font-semibold mb-2">Variação (%)</h2>
+                    <ResponsiveContainer width="100%" height={250}>
                         <BarChart data={asset.history}>
                             <XAxis
                                 dataKey="timestamp"
@@ -113,7 +114,10 @@ export const AssetDetail: React.FC = () => {
                                     })
                                 }
                             />
-                            <YAxis />
+                            <YAxis
+                                tickFormatter={(val) => `${val.toFixed(2)}%`}
+                                domain={["auto", "auto"]}
+                            />
                             <Tooltip
                                 labelFormatter={(ts) =>
                                     new Date(ts).toLocaleTimeString("pt-BR", {
@@ -122,9 +126,21 @@ export const AssetDetail: React.FC = () => {
                                         second: "2-digit",
                                     })
                                 }
-                                formatter={(value) => [value, "Volume"]}
+                                formatter={(value) => [`${Number(value).toFixed(2)}%`, "Variação"]}
                             />
-                            <Bar dataKey="volume" fill="#3B82F6" />
+                            <Bar
+                                dataKey="change"
+                                radius={[4, 4, 0, 0]}
+                                fill="#3B82F6"
+                                isAnimationActive={false}
+                            >
+                                {asset.history.map((entry, index) => (
+                                    <Cell
+                                        key={`cell-${index}`}
+                                        fill={entry.change >= 0 ? "#22C55E" : "#EF4444"}
+                                    />
+                                ))}
+                            </Bar>
                         </BarChart>
                     </ResponsiveContainer>
                 </div>
