@@ -48,7 +48,6 @@ export const AssetDetail: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* --- GRÁFICO DE PREÇO --- */}
                 <div className="border border-neutral-700 dark:border-neutral-600 p-4 rounded bg-neutral-50 dark:bg-neutral-900">
                     <h2 className="font-semibold mb-2">Preço recente</h2>
                     <ResponsiveContainer width="100%" height={200}>
@@ -100,7 +99,6 @@ export const AssetDetail: React.FC = () => {
                     </ResponsiveContainer>
                 </div>
 
-                {/* --- GRÁFICO DE VOLUME --- */}
                 <div className="border border-neutral-700 dark:border-neutral-600 p-4 rounded bg-neutral-50 dark:bg-neutral-900">
                     <h2 className="font-semibold mb-2">Volume</h2>
                     <ResponsiveContainer width="100%" height={150}>
