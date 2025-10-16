@@ -16,13 +16,13 @@ Você pode trocar/expandir a lista de ativos (ex.: bitcoin,ethereum,monero,solan
 
 - [x] Conexão ao WebSocket: A aplicação deve conectar ao endpoint e receber mensagens JSON de preço em tempo real.
 - [x] Listagem de Ativos: Exibir uma lista com os ativos monitorados e seus preços atuais (atualizando em tempo real).
-- [] Detalhe do Ativo: Ao clicar em um ativo da lista, exibir uma página de detalhes com:
+- [x] Detalhe do Ativo: Ao clicar em um ativo da lista, exibir uma página de detalhes com:
     - [x] nome/símbolo do ativo;
     - [x] preço atual;
     - [x] variação recente com base nos últimos eventos recebidos;
-    - [] Gráfico com o histórico recente recebido durante a sessão;
-    - [] Cache Local (IndexedDB);
-    - [] Um histórico dos últimos 10 valores por ativo.
+    - [x] Gráfico com o histórico recente recebido durante a sessão;
+    - [x] Cache Local (IndexedDB);
+    - [x] Um histórico dos últimos 10 valores por ativo.
 
 ### Critérios de Avaliação:
 - Código legível e organizado.
