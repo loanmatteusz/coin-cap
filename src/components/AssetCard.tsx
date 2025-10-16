@@ -28,7 +28,7 @@ export const AssetCard: React.FC<AssetCardProps> = ({ asset }) => {
                         ) : (
                             <ArrowDown className="w-3 h-3 mr-1" />
                         )}
-                        {asset.change}%
+                        {asset.change.toFixed(2)}%
                     </p>
                 </div>
             </div>

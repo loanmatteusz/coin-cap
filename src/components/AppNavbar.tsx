@@ -22,7 +22,7 @@ const AppNavbar = () => {
             <SidebarTrigger className="text-white" />
 
             <div className="flex items-center gap-4 text-white">
-                <Link to="/">Dashboard</Link>
+                <Link to="/">Marketcap</Link>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" size="icon">
