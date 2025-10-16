@@ -11,7 +11,7 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/$",
             "headers": {
                 "Content-Security-Policy": "default-src 'self'; connect-src 'self' wss://ws.coincap.io https://api.coincap.io; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://avatars.githubusercontent.com;"
             },
