@@ -12,10 +12,10 @@
     "routes": [
         {
             "src": "/(.*)",
+            "dest": "/index.html",
             "headers": {
-                "Content-Security-Policy": "default-src 'self'; connect-src 'self' wss://ws.coincap.io https://api.coincap.io; script-src 'self'; style-src 'self' 'unsafe-inline';"
-            },
-            "dest": "/index.html"
+                "Content-Security-Policy": "default-src 'self'; connect-src 'self' wss://ws.coincap.io https://api.coincap.io; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+            }
         }
     ]
 }
