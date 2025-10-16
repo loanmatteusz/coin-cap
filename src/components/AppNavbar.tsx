@@ -47,7 +47,7 @@ const AppNavbar = () => {
                 <DropdownMenu>
                     <DropdownMenuTrigger>
                         <Avatar>
-                            <AvatarImage src="https://avatars.githubusercontent.com/u/39535956" />
+                            <AvatarImage src="/avatars/39535956.png" alt="avatar" />
                             <AvatarFallback>LM</AvatarFallback>
                         </Avatar>
                     </DropdownMenuTrigger>
