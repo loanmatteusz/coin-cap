@@ -36,6 +36,12 @@ React, TypeScript, Vite, Tailwind, Recharts, IndexedDB, Vitest, Docker, Nginx.
 
 ## ⚙️ Rodando o Projeto
 
+### Clonar o repositório
+```bash
+git clone https://github.com/loanmatteusz/coin-cap.git
+cd coin-cap
+```
+
 ### Localmente
 ```bash
 npm install
